@@ -3,7 +3,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'new-animal',
   template: `
-  <a (click)="enableNewAnimal()">Add New Animal</a>
+  <button class="btn btn-success" (click)="enableNewAnimal()">Add New Animal</button>
   <div *ngIf="newAnimal">
     <p>Add an animal:</p>
     <label>Name:</label>
