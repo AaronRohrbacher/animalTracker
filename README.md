@@ -1,8 +1,8 @@
 # _Tap Room_
 
-#### _This application allows you to view, edit, delete, and add kegs to a dynamic tap list. Running low? We'll let ya know! Track by ABV, price, etc. ._
+#### _This application will track your zoo animals by name, age, number of caretakers, species, diet, current location, sex, and likes/dislikes._
 
-#### By _**Aaron Rohrbacher & Nate McGregor**_
+#### By _**Aaron Rohrbacher**_
 
 ## Setup/Installation Requirements
 
@@ -37,15 +37,15 @@ $ npm install && bower install && gulp build && gulp serve
 
 * _You should be seeing a website that looks like the screenshot below! If not, review your installations of Node.js, and Homebrew (if applicable). My apologies for my lack of knowledge beyond MacOS!_
 
-![alt text](img/screen.png)
+![alt text](resources/img/screen.png)
 
 ## What it will do:
 
-The program will allow you to see a keg list based on if you select employee or patron. Patrons can only see kegs with more than 10 pints left in them, while employees can see all kegs, can change kegs and can see how many pints are left in each keg. Users will also be able to filter list by beer name.
+This program will allow the user to add new animals, view young or mature animals, and edit current animals. In the future, this app will group animals by species, and calculate how many caretakers may be needed on a given day. It will also look nicer! :)
 
 _Aaron Rohrbacher: url(http://aaronrohrbacher.github.io/portfolio/)_
 
 ## Technologies Used
 _Angular 2, HTML, CSS, JavaScript, jQuery, built and served locally with Bower and Gulp._
 
-Copyright (c) 2017 **_Aaron Rohrbacher Nate McGregor_**
+Copyright (c) 2017 **_Aaron Rohrbacher_**
