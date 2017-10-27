@@ -43,12 +43,12 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
+  @Input() childNewAnimal: string;
   @Output() clickSender = new EventEmitter();
   range: string = "all"
   animalList: Animal[] = [
     new Animal('Harry', 'Hairy Pig', 4, 'slop', 'pigpen', 1, 'male', 'poopin', 'movin')
   ]
-
   editButton(animal) {
     this.clickSender.emit(animal);
   }
