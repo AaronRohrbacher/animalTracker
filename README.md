@@ -1,6 +1,6 @@
-# _Tap Room_
+# _Zoo Animal Tracker_
 
-#### _This application will track your zoo animals by name, age, number of caretakers, species, diet, current location, sex, and likes/dislikes._
+#### _This application will track your zoo animals by name, age, number of caretakers, species, diet, current location, sex, and likes/dislikes. Run a zoo from your very own home!_
 
 #### By _**Aaron Rohrbacher**_
 
