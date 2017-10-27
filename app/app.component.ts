@@ -5,6 +5,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class = "container">
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
     <animal-list [childAnimalList]="animalList"></animal-list>
   </div>
   `
@@ -14,5 +15,8 @@ export class AppComponent {
   animalList: Animal[] = [
     new Animal('Harry', 'Hairy Pig', 4, 'slop', 'pigpen', 1, 'male', 'poopin', 'movin')
   ]
-  debugger;
+
+  addAnimal(animal: Animal) {
+    this.animalList.push(animal);
+  }
 }
