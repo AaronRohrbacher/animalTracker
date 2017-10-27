@@ -4,6 +4,11 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
+  <select (change)="rangeChange($event.target.value)">
+    <option value ="all">All Animals</option>
+    <option value ="young">Young Animals</option>
+    <option value ="old">Mature Animals</option>
+  </select>
   <table class="table">
     <thead>
       <tr>
@@ -19,7 +24,7 @@ import { Animal } from './animal.model';
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let animal of childAnimalList">
+      <tr *ngFor="let animal of childAnimalList | age: range">
         <td> {{animal.species}} </td>
         <td> {{animal.name}} </td>
         <td> {{animal.age}} </td>
@@ -39,12 +44,16 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
-
+  range: string = "all"
   animalList: Animal[] = [
     new Animal('Harry', 'Hairy Pig', 4, 'slop', 'pigpen', 1, 'male', 'poopin', 'movin')
   ]
 
   editButton(animal) {
     this.clickSender.emit(animal);
+  }
+
+  rangeChange(range) {
+    this.range = range;
   }
 }
