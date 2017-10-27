@@ -18,7 +18,7 @@ import { Animal } from './animal.model';
         <th>Dislikes</th>
       </tr>
     </thead>
-    <tbody id="results">
+    <tbody>
       <tr *ngFor="let animal of childAnimalList">
         <td> {{animal.species}} </td>
         <td> {{animal.name}} </td>
@@ -29,6 +29,7 @@ import { Animal } from './animal.model';
         <td> {{animal.sex}} </td>
         <td> {{animal.likes}} </td>
         <td> {{animal.dislikes}} </td>
+        <td><button (click)="editButton(animal)">Edit</button>
       </tr>
     </tbody>
   </table>
@@ -37,9 +38,13 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
+  @Output() clickSender = new EventEmitter();
 
   animalList: Animal[] = [
     new Animal('Harry', 'Hairy Pig', 4, 'slop', 'pigpen', 1, 'male', 'poopin', 'movin')
   ]
-  debugger;
+
+  editButton(animal) {
+    this.clickSender.emit(animal);
+  }
 }
